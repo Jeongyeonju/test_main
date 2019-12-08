@@ -1,42 +1,210 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> 최면감수성 측정 테스트 </title>
-	<link href="https://fonts.googleapis.com/css?family=Gugi&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap" rel="stylesheet">
+    <title> Hypnotic Sensitivity </title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR:200,300,400,500,600,700,900&display=swap" rel="stylesheet">
 
 
-<style type="text/css">
-	html {background: black;}
-	h1 {font-family: 'Gugi', cursive; font-size: 50pt; text-align: center; color: white; letter-spacing :4px; }
-	h2 {font-family: 'Noto Sans KR', sans-serif;, font-weight: 900; font-size: 20pt; text-align: center; color: white; letter-spacing :4px; }
-	h3 {font-family: 'Noto Sans KR', sans-serif;, font-weight: 700; font-size: 15pt; text-align: center; color: white; letter-spacing :4px;}
-	p {font-family: 'Noto Sans KR', sans-serif;, font-weight: 400; font-size: 15pt; text-align: center; color: white;}
-	.mybody {background-repeat: no-repeat; height: 800px;overflow: hidden;}
-    body, h1,h2,h3, p {margin:0; padding:0;}
-    section{position: relative;}
-    #monitor{position: fixed; background: black;padding: 5px; top:0; right:0;width: 70px;height:20px; color:white;}
-        .wrap{ margin:auto; position:relative; overflow: hidden;}
-        .wrap2{width:100%; margin:auto; position:relative;}
-        .brain{width: 150px; top: 200px; left: 700px; position: relative;}
-</style>
+    <style type="text/css">
+        html{font-family: 'Noto Serif KR', serif; background: black;}
+        body,h1,p {margin: 0; padding: 0;}
+        .wrap { width: 1515px; height: 800px; margin: 0; position: relative; overflow: hidden;}
+        .foot {margin: auto; position: relative;}
+        header .wrap, footer .wrap {width: 100%;}
+        header .wrap {background:url(open.gif); background-size: cover; background-position: 0px -130px; height: 800px;}
+        h1 {font-weight: 900; position: absolute; color: white;}
+        h2 {font-size: 50px; font-weight: 700; line-height: 1.3; position: absolute; color: white; }
+        p {font-size: 20px; font-weight: 300; line-height: 1.6; word-spacing: -2px; letter-spacing: -1px; position: absolute; text-align: justify; color: #ADADAD;}
+
+        .pan {height: 400px;
+            transition: all 1s}
+        .pan: hover {opacity: 0.4;}
+        .bold {font-weight: 900;}
+        .bold2 {font-size: 50px; font-weight: 700; line-height: 1.3; position: absolute; color: white;}
+        #s1 .wrap {height: 500px; background-color: none;}
+        #s1 {background : url(best.jpg); background-size: cover; background-attachment: fixed;}
+        .h1 {left: 50px; top: 100px; opacity: 0;}
+        .p1 {width: 650px;  left: 800px; top: 250px; opacity: 0;}
+
+        #s2 .wrap {height: 500px; margin: 0;}
+        #s2 p {width: 390px;  height: 150px; display: block; position: relative; float: left;  top: 250px; opacity: 0;}
+
+        #s15 {background : url(wrinkle.jpg); background-size: cover; background-attachment: fixed;}
+
+        #s3 .wrap {height: 700px; margin: 0;}
+        #s3 img {width: 150px; top: 270px; display: block; position: relative; float: left; opacity: 0; border: dashed; border-color: white; border-width: 15px;}
+        button {background : url(brain.png); background-size: cover; width: 150px; height:175px; top: 270px; display: block; position: relative; float: left; opacity: 0;}
+        button:hover {width: 200px; height: 225px;}
+
+        .h2 {top: 250px; width: 540px; opacity: 0; color: white;}
+        .p2 {top: 650px; width: 700px; opacity: 0;}
+
+
+        footer {height: 100px;}
+        footer p {font-size: 15px; color: white; left: 560px; top: 50px; word-spacing: 2px; letter-spacing: -1px;}
+
+
+
+
+    @keyframes top{
+        from{top: 400px; opacity: 0;}
+        to{top: 100px; opacity: 1;}
+    }
+
+    @keyframes top2{
+        from{top: 400px; opacity: 0;}
+        to{top: 200px; opacity: 1;}
+    }
+
+    @keyframes top3{
+        from{top: 500px; opacity: 0;}
+        to{top: 200px; opacity: 1;}
+    }
+
+
+    @keyframes left{
+        from{left: 1000px; opacity: 0;}
+        to{left: 800px; opacity: 1;}
+    }
+
+    @keyframes right{
+        from{left: 0px; opacity: 0;}
+        to{left: 400px; opacity: 1;}
+    }
+
+
+
+    @keyframes bottom{
+        from{top: 0px; opacity: 0.3;}
+        to{top: 700px; opacity: 1;}
+    }
+
+    @keyframes bottom2{
+        from{top: 0px; opacity: 0.3;}
+        to{top: 800px; opacity: 1;}
+    }
+
+    @keyframes opa{
+        from {opacity: 1;}
+        to{opacity: 0.5;}
+    }
+
+    @keyframes left2{
+        from{left: 1500px; opacity: 0;}
+        to{left: 1200px; opacity: 1;}
+    }
+
+    </style>
 </head>
 
-<body id="mybody">
-    <header>
-    	<div class="wrap">
-        	<div id="monitor" style="z-index: 3;"></div>
-        </div>
-</header>
 
-        <section class="s1">
-        	<br><br><h2>당신의</h2> <h1>최면 감수성</h1><br>
-            <h3>- Your Hypnotic Sensitivity -</h3> 
-			<a href="https://jeongyeonju.github.io/test_learn/">
-            <img src="brain.png" class="brain"></a>
-        <div class="wrap2">
+<body>
+    <header>
+        <div class="wrap">
+            <div class="pan">
         </div>
-	</section>
+    </div>
+    </header>
+
+
+    <section id="s1">
+        <div class="wrap">
+            <h2 class="h1" id="h1">최면 감수성이란?</h2>
+            <p class="p1" id="p1"><span class="bold">(Hypnotic Sensitivity)</span><br>한 개인이 최면적 암시에 얼마나 민감하게 잘 반응하는지를 말하는 개념입니다.
+            <br>최면감수성을 다른 말로 보다 쉽게 설명하면 얼마나 최면에 잘 걸리는지를 설명하는 개념이기도 합니다.
+            <br>같은 약을 사용해도 그 효과가 사람에 따라 달리 나타나듯이 모든 사람이 최면에 유도되는 것이 아니라 개인차이가 있습니다.</p>
+        </div>
+    </section>
+
+
+    <section id="s2">
+        <div class="wrap">
+
+                <p id="what1" style="left: 50px;"><span class="bold2">최면 상태란?</span>
+                <br><br><br>일종의 변화된 의식 상태로서,<br>한 가지 요소만으로는 완전히 설명하기가 어렵다.</p>
+
+                <p id="what2" style="left: 150px;"><span class="bold2">몰입 상태란?</span>
+                <br><br><br>주변에 대한 인식들은 줄어들고 중심에 대한 인식이 증가된 상태로,<br>그 사람의 모든 감각기능들이 최면경험 그 자체에 깊이 빠져들게 된다.</p>
+
+                <p id="what3" style="left: 250px;"><span class="bold2">해리 현상이란?</span>
+                <br><br><br>의식이 변화된 최면상태에서 인식의 정신 기능이 분리되거나 단절되어,<br>각 부분들이 독립적으로 작동되는 것이다.</p>
+</div>
+    </section>
+
+
+    <section id="s15">
+        <div class="wrap">
+        </div>
+    </section>
+
+
+
+    <section id="s3">
+        <div class="wrap">
+            <a href="https://jeongyeonju.github.io/test_test/">
+                <button id="img1"></button></a>
+            <h2 class="h2" id="h2">당신의 최면감수성을<br>테스트 해보세요!</h2>
+        </div>
+    </section>
+
+
+
+
+
+
+<div id="monitor"></div>
+
+    <script type="text/javascript">
+
+    window.onscroll = function(){
+        var t = document.documentElement.scrollTop + document.body.scrollTop;
+        monitor.innerHTML = t.toFixed(1);
+
+
+if (t>450) { h1.style.animation = "top 1s forwards";
+            p1.style.animation = "top2 1s forwards";
+        }
+        else{h1.style.animation = "";
+            p1.style.animation = "";
+        }
+
+
+if (t>900) {what1.style.animation = "top3 1s forwards";
+        }
+        else{what1.style.animation ="";
+        }
+
+if (t>1000) {what2.style.animation = "top3 1.3s forwards";
+        }
+        else{what2.style.animation ="";
+        }
+
+
+if (t>1100) {what3.style.animation = "top3 1.3s forwards";
+        }
+        else{what3.style.animation ="";
+        }
+
+if (t>2000) {h2.style.animation = "left 1.3s forwards";
+            img1.style.animation = "right 1.3s forwards";
+        }
+        else{h2.style.animation = "";
+            img1.style.animation = "";}
+}
+
+
+</script>
+
+
+
+
+
+    <footer>
+        <div class="foot">
+            <p>copyright&copy;2019 한경대학교 디자인학과 정연주. 모든 권리 보유. </p>
+        </div>
+    </footer>
+
 
 </body>
 </html>
